@@ -29,6 +29,7 @@ namespace CapaPresentación
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,17 +45,20 @@ namespace CapaPresentación
             this.btnInsertar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cmbTipo_de_Computadora = new System.Windows.Forms.ComboBox();
+            this.computadoraDataSet = new CapaPresentación.ComputadoraDataSet();
+            this.computadoraDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computadoraDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computadoraDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(621, 124);
+            this.label1.Location = new System.Drawing.Point(889, 153);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 18);
             this.label1.TabIndex = 0;
@@ -64,7 +68,7 @@ namespace CapaPresentación
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(621, 166);
+            this.label2.Location = new System.Drawing.Point(889, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(195, 18);
             this.label2.TabIndex = 1;
@@ -74,7 +78,7 @@ namespace CapaPresentación
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(621, 213);
+            this.label3.Location = new System.Drawing.Point(889, 242);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 18);
             this.label3.TabIndex = 2;
@@ -84,7 +88,7 @@ namespace CapaPresentación
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(621, 260);
+            this.label4.Location = new System.Drawing.Point(889, 289);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 18);
             this.label4.TabIndex = 3;
@@ -95,7 +99,7 @@ namespace CapaPresentación
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(621, 307);
+            this.label5.Location = new System.Drawing.Point(889, 336);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(174, 18);
             this.label5.TabIndex = 4;
@@ -105,7 +109,7 @@ namespace CapaPresentación
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(621, 354);
+            this.label6.Location = new System.Drawing.Point(889, 383);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(153, 18);
             this.label6.TabIndex = 5;
@@ -115,7 +119,7 @@ namespace CapaPresentación
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(781, 30);
+            this.label7.Location = new System.Drawing.Point(1049, 59);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(307, 22);
             this.label7.TabIndex = 6;
@@ -123,35 +127,35 @@ namespace CapaPresentación
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(846, 122);
+            this.txtCodigo.Location = new System.Drawing.Point(1114, 151);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(384, 20);
             this.txtCodigo.TabIndex = 7;
             // 
             // txtProcesador
             // 
-            this.txtProcesador.Location = new System.Drawing.Point(846, 211);
+            this.txtProcesador.Location = new System.Drawing.Point(1114, 240);
             this.txtProcesador.Name = "txtProcesador";
             this.txtProcesador.Size = new System.Drawing.Size(384, 20);
             this.txtProcesador.TabIndex = 9;
             // 
             // txtMemoria_RAM
             // 
-            this.txtMemoria_RAM.Location = new System.Drawing.Point(846, 258);
+            this.txtMemoria_RAM.Location = new System.Drawing.Point(1114, 287);
             this.txtMemoria_RAM.Name = "txtMemoria_RAM";
             this.txtMemoria_RAM.Size = new System.Drawing.Size(384, 20);
             this.txtMemoria_RAM.TabIndex = 10;
             // 
             // txtTipo_de_disco_duro
             // 
-            this.txtTipo_de_disco_duro.Location = new System.Drawing.Point(846, 305);
+            this.txtTipo_de_disco_duro.Location = new System.Drawing.Point(1114, 334);
             this.txtTipo_de_disco_duro.Name = "txtTipo_de_disco_duro";
             this.txtTipo_de_disco_duro.Size = new System.Drawing.Size(384, 20);
             this.txtTipo_de_disco_duro.TabIndex = 11;
             // 
             // txtAlmacenamiento
             // 
-            this.txtAlmacenamiento.Location = new System.Drawing.Point(846, 354);
+            this.txtAlmacenamiento.Location = new System.Drawing.Point(1114, 383);
             this.txtAlmacenamiento.Name = "txtAlmacenamiento";
             this.txtAlmacenamiento.Size = new System.Drawing.Size(384, 20);
             this.txtAlmacenamiento.TabIndex = 12;
@@ -159,18 +163,18 @@ namespace CapaPresentación
             // btnInsertar
             // 
             this.btnInsertar.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertar.Location = new System.Drawing.Point(624, 425);
+            this.btnInsertar.Location = new System.Drawing.Point(1005, 476);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(96, 23);
             this.btnInsertar.TabIndex = 13;
-            this.btnInsertar.Text = "INSERTAR";
+            this.btnInsertar.Text = "GUARDAR";
             this.btnInsertar.UseVisualStyleBackColor = true;
             this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(795, 425);
+            this.btnEliminar.Location = new System.Drawing.Point(1176, 476);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(95, 23);
             this.btnEliminar.TabIndex = 14;
@@ -181,7 +185,7 @@ namespace CapaPresentación
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(977, 425);
+            this.btnModificar.Location = new System.Drawing.Point(1358, 476);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(98, 23);
             this.btnModificar.TabIndex = 15;
@@ -189,23 +193,13 @@ namespace CapaPresentación
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(1147, 425);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(83, 23);
-            this.btnBuscar.TabIndex = 16;
-            this.btnBuscar.Text = "BUSCAR";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 40);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 30);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(589, 416);
+            this.dataGridView1.Size = new System.Drawing.Size(812, 523);
             this.dataGridView1.TabIndex = 17;
             // 
             // cmbTipo_de_Computadora
@@ -217,20 +211,29 @@ namespace CapaPresentación
             this.cmbTipo_de_Computadora.Items.AddRange(new object[] {
             "Pórtatil",
             "Escritirio"});
-            this.cmbTipo_de_Computadora.Location = new System.Drawing.Point(846, 166);
+            this.cmbTipo_de_Computadora.Location = new System.Drawing.Point(1114, 195);
             this.cmbTipo_de_Computadora.Name = "cmbTipo_de_Computadora";
             this.cmbTipo_de_Computadora.Size = new System.Drawing.Size(384, 21);
             this.cmbTipo_de_Computadora.TabIndex = 18;
             this.cmbTipo_de_Computadora.Text = "Seleccione un tipo...";
             // 
+            // computadoraDataSet
+            // 
+            this.computadoraDataSet.DataSetName = "ComputadoraDataSet";
+            this.computadoraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // computadoraDataSetBindingSource
+            // 
+            this.computadoraDataSetBindingSource.DataSource = this.computadoraDataSet;
+            this.computadoraDataSetBindingSource.Position = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1274, 510);
+            this.ClientSize = new System.Drawing.Size(1548, 575);
             this.Controls.Add(this.cmbTipo_de_Computadora);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnInsertar);
@@ -250,6 +253,8 @@ namespace CapaPresentación
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computadoraDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computadoraDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,9 +277,10 @@ namespace CapaPresentación
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox cmbTipo_de_Computadora;
+        private System.Windows.Forms.BindingSource computadoraDataSetBindingSource;
+        private ComputadoraDataSet computadoraDataSet;
     }
 }
 

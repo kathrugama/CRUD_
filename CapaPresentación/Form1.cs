@@ -60,7 +60,7 @@ namespace CapaPresentación
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("no se pudo insertar los datos por: " + ex);
+                        MessageBox.Show("No se pudo insertar los datos por: " + ex);
                     }
                 }
             //EDITAR
@@ -69,14 +69,14 @@ namespace CapaPresentación
                 try
                 {
                     objetoCD.EditarProd(txtCodigo.Text, cmbTipo_de_Computadora.Text, txtProcesador.Text, txtMemoria_RAM.Text, txtTipo_de_disco_duro.Text, txtAlmacenamiento.Text);
-                    MessageBox.Show("se edito correctamente");
+                    MessageBox.Show("Se edito correctamente");
                     MostrarProductos();
                     limpiarForm();
                     Editar = false;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("no se pudo editar los datos por: " + ex);
+                    MessageBox.Show("No se pudo editar los datos por: " + ex);
                 }
 
             }
@@ -105,7 +105,7 @@ namespace CapaPresentación
                 MostrarProductos();
             }
             else
-                MessageBox.Show("seleccione una fila por favor");
+                MessageBox.Show("Seleccione una fila por favor");
 
         }
 
@@ -122,7 +122,12 @@ namespace CapaPresentación
                 txtAlmacenamiento.Text = dataGridView1.CurrentRow.Cells["Almacenamiento"].Value.ToString();
             }
             else
-                MessageBox.Show("seleccione una fila por favor");
+                MessageBox.Show("Seleccione una fila por favor");
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }

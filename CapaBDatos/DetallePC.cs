@@ -3,28 +3,19 @@ using System.Data;
 using System.Data.SqlClient;
 namespace CapaBDatos
 {
-public class DetallePC
-{
+    public class DetallePC
+    {
         private Conexion Con = new Conexion();
 
         SqlDataReader Leer;
-        SqlConnection Conecta;
         DataTable tabla = new DataTable();
         SqlCommand Comando = new SqlCommand();
-        SqlCommand cmd;
 
 
         public DataTable Mostrar()
         {
 
             Comando.Connection = Con.AbrirConexion();
-
-            //string consulta = "select *from Detalles_Computadora";
-            //Comando.CommandType = CommandType.StoredProcedure;
-            //SqlDataAdapter adaptador = new SqlDataAdapter(consulta, Conecta);
-            //adaptador.Fill(tabla);
-
-            
             Comando.CommandText = "MostrarProductos";
             Comando.CommandType = CommandType.StoredProcedure;
             Leer = Comando.ExecuteReader();
@@ -79,5 +70,7 @@ public class DetallePC
             Comando.Parameters.Clear();
             Comando.Connection = Con.CerrarConexion();
         }
+      
+        
     }
 }

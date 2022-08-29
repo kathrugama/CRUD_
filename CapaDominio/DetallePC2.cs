@@ -14,9 +14,7 @@ namespace CapaDominio
     public class DetallePC2
     {
         public DetallePC objetoCD = new DetallePC();
-        SqlConnection Cn;
-        SqlCommand cmd;
-        SqlDataReader dr;
+        private int Codigo;
 
         public DataTable MostrarProd()
         {
@@ -38,25 +36,7 @@ namespace CapaDominio
         {
             objetoCD.Eliminar(Convert.ToInt32(Codigo));
         }
-        public int DetallesInsertados(int Codigo)
-        {
-            int Contador = 0;
-            try
-            {
-                cmd = new SqlCommand("Select * from Detalles_Computadora where Codigo = " + Codigo + "", Cn);
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    Contador++;
-                }
-                dr.Close();
-            }
-            catch (Exception e)
-            {
-                string Label = "No se pudo hacer la Consulta" + e.ToString();
-            }
-            return Contador;
-        }
+       
 
     }
 }
